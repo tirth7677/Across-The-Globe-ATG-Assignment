@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { signUp, Login, test,resetPassword } = require("../Controllers/authController");
+const { signUp, Login,resetPassword } = require("../Controllers/authController");
 const { validateToken } = require("../Middlewares/validateTokenHandler");
 
 // Route to handle user signup
