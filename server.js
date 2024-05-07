@@ -4,6 +4,7 @@ const connectDb = require("./Config/dbconnection.js");
 const dotenv = require("dotenv");
 const authRouter = require("./Routes/authRoutes.js");
 const postRouter = require("./Routes/postRoutes.js");
+const likeAndcommentRouter = require("./Routes/likeAndcommentRoutes.js");
 
 const app = express();
 
@@ -21,6 +22,7 @@ const port = process.env.PORT;
 // Route handlers
 app.use("/v1/api/auth", authRouter);
 app.use("/v1/api/post", postRouter);
+app.use("/v1/api/likeAndcomment", likeAndcommentRouter);
 
 // Start the server
 app.listen(port, () => {

@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-// Define the Post schema
 const PostSchema = new mongoose.Schema(
     {
         title: {
@@ -25,8 +24,11 @@ const PostSchema = new mongoose.Schema(
                 },
                 user: {
                     type: mongoose.Schema.Types.ObjectId,
-                    required: true,
                     ref: 'User', // Reference to the user who posted the comment
+                },
+                username: {
+                    type: String,
+                    required: true,
                 },
                 createdAt: {
                     type: Date,
@@ -34,7 +36,19 @@ const PostSchema = new mongoose.Schema(
                 },
             }
         ],
-        likes: {
+        likes: [
+            {
+                user: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: 'User', // Reference to the user who liked the post
+                },
+                username: {
+                    type: String,
+                    required: true,
+                },
+            }
+        ],
+        likesCount: {
             type: Number,
             default: 0,
         },
