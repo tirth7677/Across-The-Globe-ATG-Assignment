@@ -6,7 +6,7 @@ const User = require("../Models/userModel");
 const signUp = async (req, res) => {
     try {
         // Extracting user data from the request body
-        const { email, password } = req.body;
+        const { email, password,username } = req.body;
 
         // Check if the email is already in use
         const existingUser = await User.findOne({ email });
@@ -22,6 +22,7 @@ const signUp = async (req, res) => {
 
         // Create a new user object with hashed password
         const newUser = new User({
+            username,
             email,
             password: hashedPassword,
         });

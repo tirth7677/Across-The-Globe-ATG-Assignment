@@ -3,6 +3,7 @@ const cors = require("cors");
 const connectDb = require("./Config/dbconnection.js");
 const dotenv = require("dotenv");
 const authRouter = require("./Routes/authRoutes.js");
+const postRouter = require("./Routes/postRoutes.js");
 
 const app = express();
 
@@ -19,6 +20,7 @@ const port = process.env.PORT;
 
 // Route handlers
 app.use("/v1/api/auth", authRouter);
+app.use("/v1/api/post", postRouter);
 
 // Start the server
 app.listen(port, () => {
