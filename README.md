@@ -5,4 +5,4 @@
 <h4><b>Step 4: </b>Open Postman and run the request</h4>
 <br>
 <br>
-<h3><b>Postman APi documentation: </b>https://documenter.getpostman.com/view/27080842/2sA3JFB4bA</h3>
+<h3><b>Postman APi documentation(Updated): </b>https://documenter.getpostman.com/view/27080842/2sA3JFB4bA</h3>
