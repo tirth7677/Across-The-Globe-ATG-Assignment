@@ -27,8 +27,8 @@ app.use("/v1/api/post", postRouter);
 app.use("/v1/api/likeAndcomment", likeAndcommentRouter);
 
 // SSL/TLS certificate files
-const privateKey = fs.readFileSync("path/to/your/private-key.pem", "utf8");
-const certificate = fs.readFileSync("path/to/your/certificate.pem", "utf8");
+const privateKey = fs.readFileSync("./private-key.pem", "utf8");
+const certificate = fs.readFileSync("./certificate.pem", "utf8");
 const ca = fs.readFileSync("path/to/your/ca.pem", "utf8");
 
 const credentials = {
